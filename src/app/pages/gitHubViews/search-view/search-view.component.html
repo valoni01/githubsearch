@@ -1,0 +1,18 @@
+<div class="container">
+   <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutAlign.xs="center">
+     <h3>
+        Search more than 37M users <br>
+    </h3>
+  </div>
+
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutAlign.xs="center" >
+      <input type="text" placeholder="Search GitHub" [(ngModel)]="gitHubName" id="searchBar" name="fname">
+      <a routerLink="/search/{{gitHubName}}"><button id="searchButon" mat-raised-button> <mat-icon id="iconSearch">search</mat-icon> Search   </button></a>
+ </div>
+ <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutAlign.xs="center">
+    <img id="gitImage" width="20%" height="10%" src="../assets/images/Octocat.png">
+</div>
+
+
+</div>
+

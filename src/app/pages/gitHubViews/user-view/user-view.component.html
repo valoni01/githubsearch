@@ -1,0 +1,41 @@
+<div class="container">
+   <a routerLink="/"><mat-icon style="font-size:40px">keyboard_backspace</mat-icon></a>
+
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5%">
+    <h2>{{totalCount}} repository results</h2>
+    <mat-paginator [length]="totalCount" [pageSize]="searchParams.per_page" [pageIndex]="searchParams.page"
+      [pageSizeOptions]=[10,20,50,100] (page)="pageEvent($event)">
+    </mat-paginator>
+
+  </div>
+  <hr>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5%" >
+    <div fxFlex="10%">
+
+    </div>
+    <div fxFlex="70%" class="userHolder">
+      <mat-spinner *ngIf="onLoad" [diameter]="50"></mat-spinner>
+      <ul *ngIf="!onLoad">
+        <li *ngFor="let user of userDetails">
+          <a href={{user.html_url}}>
+            <div style="border-bottom:1px solid grey">
+              <div fxFlex="25">
+                <img src={{user.avatar_url}}>
+
+
+              </div>
+              <div fxFlex="25">
+                {{user.login}}
+
+              </div>
+              <div fxFlex="20">
+                {{user.score}}
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>

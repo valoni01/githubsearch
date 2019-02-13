@@ -1,0 +1,34 @@
+.container{
+  margin-bottom:10%;
+    #searchBar{
+       width:50%;
+       height:20px;
+       padding:7px;
+    }
+    #searchButon{
+      margin-left:20%;
+    }
+    #iconSearch{
+      font-size:30px;
+      animation: pulse 1s infinite;
+    }
+    #gitImage{
+      margin-top:2%;
+      animation: mover 2s infinite  alternate;
+    }
+  
+}
+
+
+
+@keyframes pulse {
+  100% {
+      transform:rotate(10deg);
+    }
+}
+
+
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
